@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Александр &amp; София — 19.09.2026</title>
+<meta name="description" content="Приглашение на свадьбу Александра и Софии. 19 сентября 2026, Villa Verde." />
+<meta name="theme-color" content="#0B0908" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230B0908'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23C9A44C' text-anchor='middle'%3EA%2FS%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.unsplash.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/scenes.css" />
+<link rel="stylesheet" href="assets/css/galleries.css" />
+<link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body class="is-locked" data-archive="false">
+
+<!-- ===== ANALOG TEXTURE LAYERS ===== -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dust" aria-hidden="true"></div>
+<div class="film-vignette" aria-hidden="true"></div>
+<div class="light-leak" aria-hidden="true"></div>
+<div class="transition-layer" id="transition-layer" aria-hidden="true"></div>
+
+<!-- ===== CURSOR ===== -->
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="site-header">
+  <button class="monogram" data-scroll-to="#invitation" aria-label="В начало">A<span>&amp;</span>S</button>
+  <div class="header-date"><span data-role="header-date">19.09.2026</span></div>
+  <div class="header-actions">
+    <button class="sound-toggle" id="sound-toggle" aria-pressed="false"><i class="sound-bars"><b></b><b></b><b></b></i><span>SOUND OFF</span></button>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-scene">MENU</button>
+  </div>
+</header>
+
+<!-- ===== PROGRESS RAIL ===== -->
+<aside class="progress-rail" aria-hidden="true">
+  <span class="progress-num" id="progress-num">01</span>
+  <i class="progress-line"><b id="progress-fill"></b></i>
+  <span class="progress-label" id="progress-label">THE INVITATION</span>
+</aside>
+<div class="progress-mobile" aria-hidden="true"><b id="progress-fill-m"></b></div>
+
+<!-- ===== MENU AS SCENE ===== -->
+<nav class="menu-scene" id="menu-scene" aria-hidden="true" aria-label="Главы">
+  <div class="menu-bg" id="menu-bg"></div>
+  <div class="menu-inner">
+    <p class="menu-kicker">CHAPTERS / ГЛАВЫ</p>
+    <ol class="menu-list">
+      <li><a href="#invitation" data-menu-img="hero" data-cursor="OPEN"><span>01</span><b>Приглашение</b><em>THE INVITATION</em></a></li>
+      <li><a href="#story" data-menu-img="story" data-cursor="OPEN"><span>02</span><b>История</b><em>THE STORY</em></a></li>
+      <li><a href="#day" data-menu-img="day" data-cursor="OPEN"><span>03</span><b>День</b><em>THE DAY</em></a></li>
+      <li><a href="#party" data-menu-img="party" data-cursor="OPEN"><span>04</span><b>Праздник</b><em>THE CELEBRATION</em></a></li>
+      <li><a href="#rsvp" data-menu-img="rsvp" data-cursor="OPEN"><span>05</span><b>Навсегда</b><em>FOREVER</em></a></li>
+    </ol>
+    <div class="menu-foot"><span>VILLA VERDE</span><span>19 СЕНТЯБРЯ 2026</span></div>
+  </div>
+</nav>
+
+<main id="film">
+
+<!-- ===================== ACT I — THE INVITATION ===================== -->
+<section class="hero" id="invitation" data-act="1" data-act-label="THE INVITATION">
+  <div class="hero-frame">
+    <div class="hero-photo photo photo--develop" data-depth="5">
+      <img
+        src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1800&q=70"
+        srcset="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=900&q=65 900w,
+                https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1600&q=70 1600w,
+                https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=2400&q=70 2400w"
+        sizes="100vw" alt="Александр и София на закате" fetchpriority="high" />
+      <div class="hero-veil"></div>
+      <div class="hero-flare" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-copy">
+      <p class="hero-eyebrow" data-frame="2">THE WEDDING OF</p>
+      <h1 class="hero-title">
+        <span class="hero-line hero-line--1" data-frame="4">Александр</span>
+        <span class="hero-line hero-line--amp" data-frame="5">&amp;</span>
+        <span class="hero-line hero-line--2" data-frame="6">София</span>
+      </h1>
+      <p class="hero-date tech" data-frame="7"><time datetime="2026-09-19T16:30">19.09.2026</time> · VILLA VERDE · 16:30</p>
+      <button class="open-invitation" id="open-invitation" data-frame="8" data-cursor="OPEN">
+        OPEN INVITATION <i aria-hidden="true">→</i>
+      </button>
+    </div>
+
+    <div class="hero-meta tech" aria-hidden="true">
+      <span>55.75° N / 37.61° E</span>
+      <span>35MM · FRAME 001</span>
+    </div>
+    <div class="hero-scroll-hint tech" aria-hidden="true"><span>SCROLL</span><i></i></div>
+  </div>
+</section>
+
+<!-- CHAPTER I TITLE CARD -->
+<section class="chapter-card" data-chapter="I" data-act="1">
+  <div class="chapter-rule" aria-hidden="true"></div>
+  <p class="chapter-kicker tech">АКТ I</p>
+  <h2 class="chapter-title" data-reveal="chars">ПРИГЛАШЕНИЕ</h2>
+  <p class="chapter-sub">THE INVITATION</p>
+</section>
+
+<!-- DIGITAL LETTER -->
+<section class="letter-scene" id="letter" data-act="1">
+  <div class="letter-paper">
+    <div class="letter-grain" aria-hidden="true"></div>
+    <p class="letter-stamp tech">PRIVATE COLLECTION · 09 / 2026</p>
+    <div class="letter-body">
+      <p class="letter-line" data-line>ДОРОГИЕ БЛИЗКИЕ И ДРУЗЬЯ,</p>
+      <p class="letter-line letter-line--big" data-line>НЕКОТОРЫЕ МОМЕНТЫ</p>
+      <p class="letter-line letter-line--big" data-line>СТОИТ ПРОЖИВАТЬ ВМЕСТЕ.</p>
+      <p class="letter-line" data-line>НАШ ДЕНЬ — ОДИН ИЗ ТАКИХ.</p>
+    </div>
+    <div class="letter-sign">
+      <span class="letter-sig" data-line>Александр &amp; София</span>
+      <span class="tech" data-line>VILLA VERDE · ЛЕСНАЯ АЛЛЕЯ, 17</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACT II — THE STORY ===================== -->
+<section class="chapter-card chapter-card--dark" data-chapter="II" data-act="2" id="story">
+  <div class="chapter-rule" aria-hidden="true"></div>
+  <p class="chapter-kicker tech">АКТ II</p>
+  <h2 class="chapter-title" data-reveal="chars">ИСТОРИЯ</h2>
+  <p class="chapter-sub">THE STORY</p>
+</section>
+
+<!-- PHOTO FLIP STACK -->
+<section class="stack-scene" data-act="2">
+  <div class="stack-sticky">
+    <p class="stack-note tech">АРХИВ / ЛИСТАЙТЕ — <span class="stack-count">01 / 05</span></p>
+    <div class="stack" id="photo-stack"></div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY AS ACTOR -->
+<section class="typo-scene" data-act="2">
+  <div class="typo-wrap">
+    <span class="typo-word" data-size="s">МЫ</span>
+    <span class="typo-word" data-size="m">ЖДАЛИ</span>
+    <span class="typo-word typo-word--right" data-size="l">ДОЛГО</span>
+    <span class="typo-word" data-size="xs">И</span>
+    <span class="typo-word" data-size="xl">ВМЕСТЕ</span>
+    <span class="typo-word typo-word--full" data-size="2xl">НАВСЕГДА.</span>
+  </div>
+</section>
+
+<!-- MATCH CUT: CIRCLES -->
+<section class="matchcut-scene" data-act="2">
+  <div class="matchcut-sticky">
+    <div class="mc-circle mc-1"><img alt="Закат над морем" loading="lazy" src="https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=1400&q=70" /></div>
+    <div class="mc-circle mc-2"><img alt="Кольца" loading="lazy" src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1400&q=70" /></div>
+    <div class="mc-circle mc-3"><img alt="Бокалы" loading="lazy" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=70" /></div>
+    <div class="mc-copy">
+      <p class="tech">MATCH CUT / ОДИН КРУГ → ДРУГОЙ</p>
+      <p class="mc-caption" data-mc-caption>СОЛНЦЕ</p>
+    </div>
+  </div>
+</section>
+
+<!-- CINEMATIC PAUSE -->
+<section class="pause-scene" data-act="2">
+  <p class="pause-date tech" data-reveal="fade">03 / 08 / 2021</p>
+  <p class="pause-line" data-reveal="lines">А ПОТОМ<br />ПОЯВИЛИСЬ МЫ.</p>
+</section>
+
+<!-- CONTACT SHEET -->
+<section class="contactsheet-scene" data-act="2" id="contactsheet">
+  <div class="cs-sticky">
+    <header class="cs-head">
+      <p class="tech">CONTACT SHEET / ГЛАВА II</p>
+      <p class="tech" data-cs-counter>01 / 10</p>
+    </header>
+    <div class="cs-sheet" id="cs-sheet"></div>
+    <div class="cs-zoom" id="cs-zoom" aria-hidden="true"><img alt="" /></div>
+    <p class="cs-caption tech" data-cs-caption>FRAME 01 · PRIVATE COLLECTION</p>
+  </div>
+</section>
+
+<!-- PHOTO ALBUM TEASER -->
+<section class="album-scene" data-act="2">
+  <div class="album-head">
+    <p class="tech">PHOTO ALBUM / ФОТОАЛЬБОМ</p>
+    <h2 class="album-title" data-reveal="chars">АЛЬБОМ</h2>
+    <p class="album-hint">Откройте кадр — он займёт весь экран.</p>
+  </div>
+  <div class="album-grid" id="album-grid"></div>
+</section>
+
+<!-- ===================== ACT III — THE DAY ===================== -->
+<section class="chapter-card" data-chapter="III" data-act="3" id="day">
+  <div class="chapter-rule" aria-hidden="true"></div>
+  <p class="chapter-kicker tech">АКТ III</p>
+  <h2 class="chapter-title" data-reveal="chars">ДЕНЬ</h2>
+  <p class="chapter-sub">THE DAY</p>
+</section>
+
+<!-- BIG NUMBERS + COUNTDOWN -->
+<section class="date-scene" data-act="3">
+  <div class="date-photos">
+    <div class="date-photo date-photo--a photo" data-depth="8">
+      <img loading="lazy" alt="Улицы Италии" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=70" />
+    </div>
+    <div class="date-photo date-photo--b photo" data-depth="14">
+      <img loading="lazy" alt="Колизей" src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=70" />
+    </div>
+  </div>
+  <div class="date-big" aria-label="19 сентября 2026">
+    <span class="date-big-line" data-bigline>19</span>
+    <span class="date-big-line" data-bigline>09</span>
+    <span class="date-big-line" data-bigline>2026</span>
+  </div>
+  <div class="countdown" id="countdown" aria-live="polite">
+    <div><b data-cd="d">00</b><span>ДНЕЙ</span></div>
+    <div><b data-cd="h">00</b><span>ЧАСОВ</span></div>
+    <div><b data-cd="m">00</b><span>МИНУТ</span></div>
+    <div><b data-cd="s">00</b><span>СЕКУНД</span></div>
+    <p class="countdown-caption tech" data-cd-caption>DО СОБЫТИЯ</p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-scene" data-act="3">
+  <header class="tl-head">
+    <p class="tech">LIVE TIMELINE / ПРОГРАММА ДНЯ</p>
+    <h2 class="tl-title" data-reveal="chars">РАСПОРЯЖЕНИЕ</h2>
+  </header>
+  <ol class="timeline" id="timeline"></ol>
+</section>
+
+<!-- VENUE / WIDE SHOT -->
+<section class="venue-scene" data-act="3">
+  <div class="venue-photo photo photo--full" data-depth="6">
+    <img loading="lazy" alt="Сад, накрытый стол" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=70" />
+    <div class="venue-tint"></div>
+  </div>
+  <div class="venue-copy">
+    <p class="tech" data-reveal="fade">МЕСТО / VILLA VERDE</p>
+    <h2 class="venue-title" data-reveal="lines">Лесная аллея, 17<br /><em>Сбор в 16:30</em></h2>
+    <p class="venue-note" data-reveal="fade">Тихий сад, тёплый камень и длинный стол под свечами.</p>
+    <a class="ghost-link" href="https://maps.google.com/?q=Villa+Verde" target="_blank" rel="noreferrer" data-cursor="OPEN">ОТКРЫТЬ КАРТУ <i>↗</i></a>
+  </div>
+  <div class="venue-caption tech" aria-hidden="true">WIDE SHOT · 35MM · 16:30</div>
+</section>
+
+<!-- FILM STRIP -->
+<section class="strip-scene" data-act="3" id="filmstrip">
+  <div class="strip-sticky">
+    <header class="strip-head">
+      <p class="tech">FILM STRIP / ПЛЁНКА</p>
+      <p class="tech">FRAME 001 — 007</p>
+    </header>
+    <div class="strip-viewport" id="strip-viewport" data-cursor="DRAG">
+      <div class="strip" id="strip"></div>
+    </div>
+    <div class="strip-bar"><b id="strip-fill"></b></div>
+  </div>
+</section>
+
+<!-- SUNSET TRANSITION -->
+<section class="sunset-scene" data-act="3">
+  <div class="sunset-photo photo">
+    <img loading="lazy" alt="Закат над городом" src="https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=2000&q=70" />
+  </div>
+  <div class="sunset-grade" aria-hidden="true"></div>
+  <div class="sunset-copy">
+    <p class="tech" data-reveal="fade">GOLDEN HOUR · 19:40</p>
+    <p class="sunset-word" data-reveal="chars">ЗАКАТ</p>
+  </div>
+</section>
+
+<!-- DINNER (DARK SCENE) -->
+<section class="dinner-scene" data-act="3" id="dinner">
+  <div class="dinner-photo photo">
+    <img loading="lazy" alt="Ужин при свечах" src="https://images.unsplash.com/photo-1517457210348-703079e57d4b?auto=format&fit=crop&w=2000&q=70" />
+    <div class="candle-flicker" aria-hidden="true"></div>
+    <div class="dinner-vignette" aria-hidden="true"></div>
+  </div>
+  <div class="dinner-copy">
+    <p class="tech" data-reveal="fade">DINNER · CANDLELIGHT</p>
+    <h2 data-reveal="lines">УЖИН</h2>
+    <p class="dinner-time tech" data-reveal="fade">18:00</p>
+    <p class="dinner-note" data-reveal="fade">Стол накрыт. Свечи зажжены.</p>
+  </div>
+</section>
+
+<!-- ===================== ACT IV — THE CELEBRATION ===================== -->
+<section class="chapter-card chapter-card--dark" data-chapter="IV" data-act="4" id="party">
+  <div class="chapter-rule" aria-hidden="true"></div>
+  <p class="chapter-kicker tech">АКТ IV</p>
+  <h2 class="chapter-title" data-reveal="chars">ПРАЗДНИК</h2>
+  <p class="chapter-sub">THE CELEBRATION</p>
+</section>
+
+<!-- PARTY FAST CUTS -->
+<section class="party-scene" data-act="4">
+  <div class="party-cuts" id="party-cuts" aria-hidden="true"></div>
+  <div class="party-copy">
+    <p class="tech" data-reveal="fade">NIGHT MODE · 21:00</p>
+    <h2 class="party-title"><span data-reveal="chars">ТАНЦЫ</span></h2>
+    <p class="party-note" data-reveal="fade">Музыка громче. Ночь длиннее.</p>
+  </div>
+</section>
+
+<!-- PARTY COLLAGE -->
+<section class="collage-scene" data-act="4">
+  <div class="collage" id="collage"></div>
+</section>
+
+<!-- FASHION MOODBOARD -->
+<section class="mood-scene" data-act="4">
+  <header class="mood-head">
+    <p class="tech">DRESS CODE / MOODBOARD</p>
+    <h2 class="mood-title" data-reveal="chars">СТИЛЬ ДНЯ</h2>
+    <p class="mood-note">Лён, шёлк, тёплые песочные тона, мягкий шалфей и немного золота.</p>
+  </header>
+  <div class="mood-grid" id="mood-grid"></div>
+</section>
+
+<!-- CINEMATIC PAUSE 2 -->
+<section class="pause-scene pause-scene--dark" data-act="4">
+  <p class="pause-date tech" data-reveal="fade">21:00 / 19.09.2026</p>
+  <p class="pause-line" data-reveal="lines">ТА НОЧЬ<br />БЫЛА ТОЛЬКО НАША.</p>
+</section>
+
+<!-- ===================== ACT V — FOREVER ===================== -->
+<section class="chapter-card" data-chapter="V" data-act="5" id="rsvp">
+  <div class="chapter-rule" aria-hidden="true"></div>
+  <p class="chapter-kicker tech">АКТ V</p>
+  <h2 class="chapter-title" data-reveal="chars">НАВСЕГДА</h2>
+  <p class="chapter-sub">FOREVER</p>
+</section>
+
+<!-- RSVP AS PHYSICAL CARD -->
+<section class="rsvp-scene" data-act="5">
+  <div class="rsvp-table" aria-hidden="true"></div>
+  <div class="rsvp-card" id="rsvp-card" data-cursor="OPEN">
+    <div class="rsvp-face rsvp-front">
+      <p class="tech">RSVP · КАРТОЧКА ПРИГЛАШЕНИЯ</p>
+      <h2>БУДЕТЕ<br />СРЕДИ НАС?</h2>
+      <p class="rsvp-sub">Ответьте до 1 сентября 2026.</p>
+      <span class="rsvp-cta">ОТКРЫТЬ <i>↑</i></span>
+    </div>
+    <form class="rsvp-face rsvp-back" id="rsvp-form" novalidate>
+      <p class="tech">RSVP / ОТВЕТ</p>
+      <label class="field"><span>Имя и фамилия</span><input type="text" name="name" required autocomplete="name" placeholder="Анна Морозова" /></label>
+      <div class="field field--choice"><span>Придёте?</span>
+        <div class="choice">
+          <button type="button" data-attend="yes" class="is-active">С радостью да</button>
+          <button type="button" data-attend="no">К сожалению, нет</button>
+        </div>
+      </div>
+      <label class="field field--num" data-keep><span>Гостей от вашей семьи</span><input type="number" name="guests" min="1" max="10" value="2" /></label>
+      <label class="field" data-keep><span>Пожелание паре</span><textarea name="wish" rows="2" placeholder="Пара добрых слов…"></textarea></label>
+      <button class="rsvp-send" type="submit">ОТПРАВИТЬ ОТВЕТ <i>→</i></button>
+      <button class="rsvp-close" type="button" aria-label="Закрыть">ЗАКРЫТЬ</button>
+    </form>
+    <div class="rsvp-face rsvp-done" id="rsvp-done">
+      <p class="tech">ОТВЕТ ПРИНЯТ</p>
+      <h2>СПАСИБО.<br />ДО ВСТРЕЧИ.</h2>
+      <p class="rsvp-sub" data-rsvp-echo></p>
+    </div>
+  </div>
+</section>
+
+<!-- WISHES -->
+<section class="wishes-scene" data-act="5">
+  <header class="wishes-head">
+    <p class="tech">WISHES / ПОЖЕЛАНИЯ</p>
+    <h2 class="wishes-title" data-reveal="chars">СЛОВА ГОСТЕЙ</h2>
+  </header>
+  <ul class="wishes-list" id="wishes-list"></ul>
+  <form class="wishes-form" id="wishes-form">
+    <input type="text" name="author" placeholder="Ваше имя" required maxlength="40" />
+    <input type="text" name="text" placeholder="Несколько тёплых слов" required maxlength="180" />
+    <button type="submit" data-cursor="OPEN">ДОБАВИТЬ <i>→</i></button>
+  </form>
+</section>
+
+<!-- FINAL 60 SECONDS -->
+<section class="final-scene" data-act="5" id="final">
+  <div class="final-photo photo">
+    <img loading="lazy" alt="Пара под фатой" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=2000&q=70" />
+    <div class="final-veil"></div>
+  </div>
+  <div class="final-copy">
+    <p class="final-line" data-final="1">ЛУЧШЕЕ<br />ЕЩЁ<br />ВПЕРЕДИ.</p>
+    <p class="final-line" data-final="2">И МЫ БУДЕМ РАДЫ<br />ВИДЕТЬ ВАС СРЕДИ НАС.</p>
+    <p class="final-date tech" data-final="3">19 · 09 · 2026</p>
+    <p class="final-names" data-final="4">Александр <span>&amp;</span> София</p>
+  </div>
+</section>
+
+<!-- THE END -->
+<section class="end-scene" data-act="5">
+  <div class="end-inner">
+    <p class="end-the" data-reveal="chars">THE END</p>
+    <div class="end-rule" aria-hidden="true"></div>
+    <p class="end-see" data-reveal="fade">ДО ВСТРЕЧИ.</p>
+    <p class="end-see end-see--en tech" data-reveal="fade">SEE YOU SOON</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <span class="tech">ALEXANDR &amp; SOFIA · 19.09.2026</span>
+  <span class="tech">VILLA VERDE · PRIVATE COLLECTION</span>
+  <button class="tech footer-top" data-scroll-to="#invitation">↑ НАЧАЛО</button>
+</footer>
+
+</main>
+
+<!-- ===== ALBUM VIEWER ===== -->
+<div class="album-viewer" id="album-viewer" role="dialog" aria-modal="true" aria-label="Просмотр фотографий" hidden>
+  <div class="av-stage"><div class="av-img" id="av-img"><img alt="" /></div></div>
+  <div class="av-ui">
+    <p class="av-counter tech" id="av-counter">01 / 08</p>
+    <p class="av-caption tech" id="av-caption"></p>
+    <div class="av-nav">
+      <button id="av-prev" aria-label="Предыдущее фото" data-cursor="PREV">← PREV</button>
+      <button id="av-next" aria-label="Следующее фото" data-cursor="NEXT">NEXT →</button>
+    </div>
+    <button class="av-close" id="av-close" aria-label="Закрыть">ESC / ЗАКРЫТЬ</button>
+  </div>
+</div>
+
+<noscript>
+  <style>
+    body{overflow:auto!important}
+    [data-frame],.hero-copy,.hero-photo{opacity:1!important;filter:none!important;transform:none!important}
+    .letter-line,.typo-word,.chapter-title{opacity:1!important;transform:none!important}
+  </style>
+</noscript>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/hero.js"></script>
+<script src="assets/js/galleries.js"></script>
+<script src="assets/js/scenes.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

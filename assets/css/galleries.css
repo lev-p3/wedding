@@ -1,0 +1,223 @@
+/* ============================================================
+   GALLERIES — contact sheet, film strip, album, photo stack
+   ============================================================ */
+
+/* ===================== PHOTO FLIP STACK (§44) ===================== */
+.stack-scene{height:520vh;position:relative;background:var(--night)}
+.stack-sticky{
+  position:sticky;top:0;height:100vh;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.stack-note{
+  position:absolute;top:clamp(84px,13vh,130px);left:50%;transform:translateX(-50%);
+  z-index:6;letter-spacing:.28em;
+}
+.stack-count{color:var(--gold)}
+.stack{
+  position:relative;
+  width:min(560px,74vw);
+  height:min(660px,68vh);
+}
+.stack-card{
+  position:absolute;inset:0;
+  background:var(--paper);
+  padding:14px 14px 58px;
+  box-shadow:var(--sh-lift);
+  will-change:transform,opacity;
+  transform-origin:center 130%;
+}
+.stack-card img{
+  width:100%;height:100%;object-fit:cover;
+  aspect-ratio:var(--ar-portrait);
+}
+.stack-card .stack-meta{
+  position:absolute;left:16px;right:16px;bottom:18px;
+  display:flex;justify-content:space-between;
+  font-family:var(--f-mono);font-size:9px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--smoke);
+}
+.stack-card .stack-meta b{font-weight:400;color:var(--wine)}
+.stack:nth-child(odd) .stack-card:nth-child(even){transform:rotate(2.2deg)}
+.stack-hint{
+  position:absolute;bottom:clamp(30px,6vh,70px);left:50%;transform:translateX(-50%);
+  font-family:var(--f-mono);font-size:9px;letter-spacing:.3em;color:var(--mute);z-index:6;
+}
+
+/* ===================== CONTACT SHEET (§41) ===================== */
+.contactsheet-scene{height:420vh;position:relative;background:#0A0A09}
+.cs-sticky{
+  position:sticky;top:0;height:100vh;overflow:hidden;
+  display:flex;flex-direction:column;
+  padding:clamp(84px,13vh,132px) var(--pad-x) clamp(34px,6vh,60px);
+}
+.cs-head{display:flex;justify-content:space-between;margin-bottom:clamp(20px,4vh,44px)}
+.cs-head .tech:last-child{color:var(--gold)}
+.cs-sheet{
+  position:relative;flex:1;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  grid-template-rows:repeat(2,1fr);
+  gap:clamp(8px,1.4vw,22px);
+  will-change:transform;
+  transform-origin:center center;
+}
+.cs-cell{
+  position:relative;overflow:hidden;background:#111;
+  cursor:none;
+  outline:1px solid rgba(255,255,255,.07);
+  outline-offset:-1px;
+  transition:filter .6s,opacity .6s;
+}
+.cs-cell img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--e-out)}
+.cs-cell:hover img{transform:scale(1.05)}
+.cs-cell::after{
+  content:attr(data-n);
+  position:absolute;left:6px;bottom:5px;
+  font-family:var(--f-mono);font-size:9px;letter-spacing:.12em;
+  color:rgba(255,255,255,.8);text-shadow:0 1px 4px #000;
+}
+.cs-cell.is-focus{z-index:3}
+.cs-sheet.is-zooming .cs-cell:not(.is-focus){opacity:.25;filter:grayscale(1) blur(2px)}
+.cs-zoom{
+  position:absolute;inset:0;z-index:5;pointer-events:none;
+  clip-path:inset(50% 50% 50% 50%);
+  overflow:hidden;opacity:0;
+}
+.cs-zoom img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.cs-caption{
+  margin-top:clamp(14px,2.6vh,26px);letter-spacing:.26em;
+  display:flex;justify-content:space-between;
+}
+
+/* ===================== FILM STRIP (§42) ===================== */
+.strip-scene{height:360vh;position:relative;background:#0A0A09}
+.strip-sticky{
+  position:sticky;top:0;height:100vh;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(80px,12vh,120px) 0 clamp(40px,7vh,70px);
+}
+.strip-head{
+  display:flex;justify-content:space-between;
+  padding:0 var(--pad-x);margin-bottom:clamp(22px,4vh,44px);
+}
+.strip-head .tech:last-child{color:var(--gold)}
+.strip-viewport{overflow:hidden;position:relative;cursor:grab}
+.strip-viewport:active{cursor:grabbing}
+.strip{
+  display:flex;align-items:stretch;gap:0;
+  background:#000;
+  padding:clamp(14px,2vw,26px) 0;
+  will-change:transform;
+  width:max-content;
+  box-shadow:0 30px 90px rgba(0,0,0,.7);
+}
+.strip::before,.strip::after{
+  content:"";position:absolute;left:0;right:0;height:100%;pointer-events:none;
+}
+.strip-frame{
+  position:relative;
+  flex:0 0 auto;
+  width:clamp(240px,34vw,520px);
+  padding:0 clamp(6px,1vw,14px);
+  border-right:clamp(6px,1vw,14px) solid #000;
+}
+.strip-frame img{
+  width:100%;aspect-ratio:var(--ar-classic);object-fit:cover;
+  filter:saturate(.96) contrast(1.03);
+}
+.strip-frame .strip-num{
+  position:absolute;left:clamp(6px,1vw,14px);bottom:-26px;
+  font-family:var(--f-mono);font-size:9px;letter-spacing:.2em;color:var(--gold);
+}
+.strip-frame .strip-note{
+  position:absolute;right:clamp(6px,1vw,14px);bottom:-26px;
+  font-family:var(--f-mono);font-size:8px;letter-spacing:.18em;color:var(--mute);
+}
+/* perforations */
+.strip-frame::before,.strip-frame::after{
+  content:"";position:absolute;left:0;right:0;height:clamp(14px,2vw,22px);
+  background-image:repeating-linear-gradient(90deg,transparent 0 10px,#0b0b0b 10px 26px);
+  background-color:#171717;
+  opacity:.9;
+}
+.strip-frame::before{top:calc(clamp(14px,2vw,26px) * -1 + 2px)}
+.strip-frame::after{bottom:calc(clamp(14px,2vw,26px) * -1 + 2px)}
+.strip-bar{
+  margin:clamp(44px,7vh,76px) var(--pad-x) 0;
+  height:1px;background:rgba(255,255,255,.14);position:relative;
+}
+.strip-bar b{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold)}
+
+/* ===================== ALBUM GRID ===================== */
+.album-scene{background:var(--night);padding:var(--s-8) var(--pad-x)}
+.album-head{max-width:var(--max-w);margin:0 auto var(--s-5)}
+.album-head .tech{color:var(--gold)}
+.album-title{
+  font-family:var(--f-display);font-weight:300;
+  font-size:var(--t-xl);line-height:1;letter-spacing:var(--track-tight);
+  margin:var(--s-3) 0 var(--s-2);
+}
+.album-hint{color:var(--mute);font-size:var(--t-sm)}
+.album-grid{
+  max-width:var(--max-w);margin:0 auto;
+  display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(10px,1.6vw,26px);
+}
+.album-cell{
+  position:relative;overflow:hidden;background:#131110;cursor:none;
+  box-shadow:var(--sh-print);
+}
+.album-cell img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--e-out),filter .6s}
+.album-cell:hover img{transform:scale(1.045)}
+.album-cell .photo-caption{opacity:1;transform:none}
+.album-cell:nth-child(6n+1){grid-column:span 5;aspect-ratio:var(--ar-portrait)}
+.album-cell:nth-child(6n+2){grid-column:span 7;aspect-ratio:var(--ar-wide)}
+.album-cell:nth-child(6n+3){grid-column:span 4;aspect-ratio:var(--ar-square)}
+.album-cell:nth-child(6n+4){grid-column:span 4;aspect-ratio:var(--ar-square)}
+.album-cell:nth-child(6n+5){grid-column:span 4;aspect-ratio:var(--ar-square)}
+.album-cell:nth-child(6n+6){grid-column:span 12;aspect-ratio:var(--ar-cinema)}
+
+/* ===================== ALBUM VIEWER (§43, §96) ===================== */
+.album-viewer{
+  position:fixed;inset:0;z-index:860;
+  background:rgba(6,5,4,.97);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .6s var(--e-cine);
+}
+.album-viewer[hidden]{display:none}
+.album-viewer.is-visible{opacity:1}
+.av-stage{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(56px,9vh,110px) clamp(40px,10vw,180px);
+}
+.av-img{
+  max-width:100%;max-height:100%;
+  box-shadow:0 50px 130px rgba(0,0,0,.75);
+  background:#0e0c0a;
+  will-change:transform,opacity;
+}
+.av-img img{max-width:100%;max-height:78vh;object-fit:contain;display:block}
+.av-ui{
+  position:absolute;inset:0;pointer-events:none;
+  padding:clamp(24px,4vh,50px) var(--pad-x);
+  display:flex;flex-direction:column;
+}
+.av-counter{color:var(--gold);letter-spacing:.3em}
+.av-caption{margin-top:8px;color:var(--mute)}
+.av-nav{
+  margin-top:auto;display:flex;justify-content:space-between;pointer-events:auto;
+}
+.av-nav button{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;color:var(--ivory);
+  padding:14px 4px;position:relative;transition:color .3s,letter-spacing .5s var(--e-out);
+}
+.av-nav button:hover{color:var(--gold);letter-spacing:.34em}
+.av-close{
+  position:absolute;top:clamp(24px,4vh,50px);right:var(--pad-x);
+  font-family:var(--f-mono);font-size:10px;letter-spacing:.22em;color:var(--mute);
+  pointer-events:auto;transition:color .3s;
+}
+.av-close:hover{color:var(--ivory)}
+body.viewer-open{overflow:hidden}
